@@ -82,7 +82,11 @@ public class Variable {
                 intvar = 0;
                 return;
             }
-            intvar = Integer.parseInt(str);
+            try {
+                intvar = Integer.parseInt(str);
+            } catch (NumberFormatException e) {
+                intvar = 0;
+            }
             if (intvar < 1 || intvar > 10)
                 intvar = 0;
             return;
