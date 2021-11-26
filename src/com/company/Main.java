@@ -11,6 +11,10 @@ public class Main {
         String str = "";
         if (var == 100)
             return "C";
+        if (var >= 50) {
+            str = "L";
+            var -= 50;
+        }
         for (int i = 0; i < var / 10; i++ ) {
             str += "X";
         }
